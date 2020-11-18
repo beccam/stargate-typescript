@@ -2,7 +2,7 @@ module.exports = {
   client: {
     service: {
       name: "stargate-library",
-      url: "http://localhost:8080/graphql/library",
+      url: "https://${DBID}-${REGION}.apps.astra.datastax.com/api/graphql/library",
     },
     excludes: ["src/generated/**/*"],
   },

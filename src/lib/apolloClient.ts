@@ -10,7 +10,7 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === "undefined",
     link: new HttpLink({
-      uri: "http://localhost:8080/graphql/library", // Server URL (must be absolute)
+      uri: "https://${DBID}-${REGION}.apps.astra.datastax.com/api/graphql/library", // Server URL (must be absolute)
       credentials: "same-origin", // Additional fetch() options like `credentials` or `headers`
       headers: {
         "x-cassandra-token": process.env.NEXT_PUBLIC_X_CASSANDRA_TOKEN,

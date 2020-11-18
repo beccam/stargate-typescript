@@ -5,7 +5,7 @@ import { Books, Maybe, useInsertBookMutation } from "../generated/graphql";
 
 const CREATE_BOOK_MUTATION = gql`
   mutation insertBook($title: String!, $author: String!) {
-    book: insertBooks(value: { title: $title, author: $author }) {
+    book: insertBooks(value: { title: $title, author: $author }, options:{ consistency: LOCAL_QUORUM} ) {
       value {
         title
         author

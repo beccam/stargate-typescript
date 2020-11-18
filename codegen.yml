@@ -1,5 +1,5 @@
 overwrite: true
-schema: "http://localhost:8080/graphql/library"
+schema: "https://${DBID}-${REGION}.apps.astra.datastax.com/api/graphql/library"
 documents: "src/**/!(*.d).{ts,tsx}"
 generates:
   src/generated/graphql.tsx:

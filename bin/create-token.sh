@@ -2,9 +2,9 @@
 
 set -eu
 
-curl -L -X POST 'http://localhost:8081/v1/auth' \
+curl -L -X POST 'https://${DBID}-${REGION}.apps.astra.datastax.com/api/rest/v1/auth' \
   -H 'Content-Type: application/json' \
   --data-raw '{
-    "username": "cassandra",
-    "password": "cassandra"
+    "username": "-",
+    "password": "-"
 }'
